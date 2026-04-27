@@ -25,23 +25,23 @@ sudo cp * /usr/local/bin
 
 ## 🚀 The Scripts and Usage
 
-### **Split Video: `dividir-video`**
+### `dividir-video`: Splits Video Files in a Fast and Lossless way
 - Requirements: `ffmpeg`
 
 This script uses `ffmpeg` to quickly split video files larger than 4GB into two or more files without any losses. Essential for bypassing the 4GB file size limit on FAT32 formatted drives, that are required to use in legacy hardware (like TV's).
 It automatically detects the extension (MKV/MP4) and the duration of the video. If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in several 1-hour parts.
 
-### Video Codec Converter: `converter-video`
+### `converter-video`: Converts Videos to H.264 MP4 Format
 - Requirements: `ffmpeg`
 
 Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
 
-### Download YouTube Videos: `sacar-youtube`
+### `sacar-youtube: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
 Downloads YouTube videos directly into MP4 format and H264 codec for better compatability, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
-### Copy Music to USB in Alphabetical Order: `musica-iveco`
+### `musica-iveco`: Copies Music to USB Drive in Alphabetical Order
 Specialized audio extraction and normalization script.
     * *Use Case:* Prepares audio files for in-vehicle entertainment systems, ensuring consistent volume and format compatibility.
