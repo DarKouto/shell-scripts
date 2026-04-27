@@ -3,6 +3,7 @@
 This repository contains a set of bash/shell scripts that automate several tasks that I had to do in my personal workflow.
 
 I used ```#!/usr/bin/env bash``` as **Shebang** for better compatibility across different systems, and because it's the **Best Practice**.
+
 All the scripts follow the **POSIX Standard**, and were tested on **CachyOS** (Arch Linux Based Distro).
 
 Most of the code, as well as the prompts are written in Portuguese. That's because I'm Portuguese and these are my scripts, for my workflow, so *deal with it*. Consider yourself lucky that I've even bothered to write the README in English 💀
