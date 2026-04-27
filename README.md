@@ -1,7 +1,9 @@
 # 🖥️ Shell Scripts
 
 This repository contains a set of bash/shell scripts that automate several tasks that I had to do in my personal workflow.
-Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, so deal with it.
+
+Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, for my workflow, so *deal with it*. Consider yourself lucky that I've even bothered to write the README in English 💀
+
 The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** Standard Shell. Tested on CachyOS Linux (Arch Based Distro).
 
 ## 🛠️ Installation
@@ -55,11 +57,34 @@ converter-video
 ```
 The script will now convert your H.265 video into MP4 H.264, while preserving the original video file.
 
-### `sacar-youtube: Downloads YouTube Videos
+<hr>
+
+## `sacar-youtube: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
-Downloads YouTube videos directly into MP4 format and H264 codec for better compatability, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
+Uses yt-dlp` to download YouTube videos directly into MP4 format and H264 codec for better compatability, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
-### `musica-iveco`: Copies Music to USB Drive in Alphabetical Order
-Specialized audio extraction and normalization script.
-    * *Use Case:* Prepares audio files for in-vehicle entertainment systems, ensuring consistent volume and format compatibility.
+### Usage:
+- Open Terminal and type:
+```bash
+sacar-youtube
+```
+Then just paste the URL of the video you want to download.
+
+<hr>
+
+## `musica-iveco`: Copies Music to USB Drive in Alphabetical Order
+This one is is a very pecicular **edge case**. I have a **IVECO Daily** van that I use for work. The radio has a USB Port to play MP3 files.
+
+**The problem**: the radio sorts the MP3 files by transfer date and not by alphabetical order, which leads to the tracklists being complepety shuffled. **SHAME ON YOU IVECO** (it's a really good vehicle btw, but this issue with the radio is complete ASS. I don't care, sue me.)
+
+**The solution**: using this script which forces the files to be transferred to the USB Drive in an alphabetically orderly fashion. **AS GOD INTENDED**. It uses a simple *for loop* with the -r recursive flag to make sure folders and subfolders are copied.
+
+### Usage:
+**IMPORTANTE NOTE:** My USB Drive path is "/run/media/darkouto/PEN_IVECO/", in your case it should be different, be sure to edit the script file to match your own USB Drive path
+- Place the MP3 files you want to transfer in a dedicated folder. Preferably each album in its own folder.
+- Open a Terminal in that folder and type:
+```bash
+musica-iveco
+```
+Wait for the process to finish and you're done.
