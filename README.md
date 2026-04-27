@@ -8,8 +8,9 @@ The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** 
 
 **Split Video: `dividir-video`**
 - Requriments: `ffmpeg`
-Automatically detects and splits large video files (MKV/MP4) into 4GB chunks using `ffmpeg`. 
-*Use Case:* Essential for bypassing the 4GB file size limit on FAT32 formatted drives used in legacy hardware.
+
+This script uses `ffmpeg` to split video files larger than 4GB into two or more files without any losses. Essential for bypassing the 4GB file size limit on FAT32 formatted drives, that are required to use in legacy hardware (like TV's).
+It automatically detects the extension (MKV/MP4) and the duration of the video. If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in several 1-hour parts.
 
 **Video Codec Converter: `converter-video`**
 Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
