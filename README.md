@@ -5,7 +5,6 @@ Most of the code and the prompts in these scripts are in Portuguese, because, we
 The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** Standard Shell. Tested on CachyOS Linux (Arch Based Distro).
 
 ## 🛠️ Installation
-To use these scripts globally in your system:
 
 1. **Clone the repository and cd into it:**
 ```bash
