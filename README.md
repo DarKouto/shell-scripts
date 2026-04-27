@@ -19,7 +19,20 @@ This repository contains a set of "wrappers" and automation scripts built to str
 
 To use these scripts globally in your system:
 
-1. **Clone the repository:**
+1. **Clone the repository and cd into it:**
 ```bash
 git clone https://github.com/darkouto/shell-scripts.git
+```
+```bash
+cd shell-scripts
+```
+
+2. **Grant execution permissions:**
+```bash
+sudo chmod +x *
+```
+
+3. **Move the scripts to your local bin::**
+```bash
+sudo cp * /usr/local/bin
 ```
