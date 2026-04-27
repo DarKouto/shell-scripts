@@ -23,7 +23,7 @@ sudo cp * /usr/local/bin
 ```
 <hr>
 
-## 🚀 The Scripts and Usage
+## 🚀 The Scripts
 
 ## `dividir-video`: Splits Video Files in a Fast and Lossless way
 - Requirements: `ffmpeg`
@@ -33,17 +33,28 @@ I created this script because most legacy hardware (like TV's) only support FAT3
 In addition, it automatically detects the video's duration and extension (MKV/MP4). If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in 1-hour parts.
 
 ### Usage:
-Place the video you want to split in a dedicated folder, and open a Terminal in that very same folder, then type:
+- Place the video you want to split in a dedicated folder:
+- Open a Terminal in that very same folder and type:
 ```bash
 dividir-video
 ```
 The script will now create two (or more) new files and name then accordingly, while keeping the original video intact.
 
-### `converter-video`: Converts Videos to H.264 MP4 Format
+<hr>
+
+## `converter-video`: Converts Videos to H.264 MP4 Format
 - Requirements: `ffmpeg`
 
 Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
+
+### Usage:
+- Place the video you want to convert in a dedicated folder
+- Open a Terminal in that very same folder and type:
+```bash
+converter-video
+```
+The script will now convert your H.265 video into MP4 H.264.
 
 ### `sacar-youtube: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
