@@ -19,7 +19,7 @@ Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
 
 ### Download YouTube Videos: `sacar-youtube`
-- Requirements: `yt-dlp` https://github.com/yt-dlp/yt-dlp and `firefox`
+- Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
 Downloads YouTube videos directly into MP4 format, utilizing Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
