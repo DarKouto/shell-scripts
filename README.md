@@ -6,15 +6,15 @@ The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** 
 
 ## 🚀 The Scripts
 
-**Split Video: dividir-video**
+**Split Video: `dividir-video`**
 Automatically detects and splits large video files (MKV/MP4) into 4GB chunks using `ffmpeg`. 
     * *Use Case:* Essential for bypassing the 4GB file size limit on FAT32 formatted drives used in legacy hardware.
 
-**Video Codec Converter: converter-video**
+**Video Codec Converter: `converter-video`**
 Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
 
-**Download YouTube Videos: sacar-youtube** **`sacar-youtube`**
+**Download YouTube Videos: `sacar-youtube`**
 A streamlined wrapper for `yt-dlp`.
     * *Use Case:* Downloads YouTube videos directly into MP4 format, utilizing Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
@@ -22,8 +22,9 @@ A streamlined wrapper for `yt-dlp`.
 Specialized audio extraction and normalization script.
     * *Use Case:* Prepares audio files for in-vehicle entertainment systems, ensuring consistent volume and format compatibility.
 
-## 🛠️ Installation & Usage
+<hr>
 
+## 🛠️ Installation
 To use these scripts globally in your system:
 
 1. **Clone the repository and cd into it:**
@@ -41,3 +42,4 @@ sudo chmod +x *
 ```bash
 sudo cp * /usr/local/bin
 ```
+<hr>
