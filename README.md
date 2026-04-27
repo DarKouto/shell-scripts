@@ -1,4 +1,4 @@
-# Shell Scripts Toolkit 🛠️
+# 🖥️ Shell Scripts
 
 This repository contains a set of bash/shell scripts that automate several tasks that I had to do in my personal workflow.
 Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, so deal with it.
