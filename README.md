@@ -19,10 +19,14 @@ Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
 
 **Download YouTube Videos: `sacar-youtube`**
-- Requirements: `yt-dlp` https://github.com/yt-dlp/yt-dlp
-    * *Use Case:* Downloads YouTube videos directly into MP4 format, utilizing Firefox cookies to prevent bot detection and ensure high-speed downloads.
+- Requirements:
+   - `yt-dlp` https://github.com/yt-dlp/yt-dlp
+   - `firefox`
+
+Downloads YouTube videos directly into MP4 format, utilizing Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
 **Copy Music to USB in Alphabetical Order: `musica-iveco`**:
+
 Specialized audio extraction and normalization script.
     * *Use Case:* Prepares audio files for in-vehicle entertainment systems, ensuring consistent volume and format compatibility.
 
