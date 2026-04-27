@@ -38,7 +38,7 @@ sudo cp {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bi
 In addition, it automatically detects the video's duration and extension (MKV/MP4). If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in 1-hour parts.
 
 ### Usage:
-- Place the video you want to split in a dedicated folder:
+- Place the video you want to split in a dedicated folder
 - Open a Terminal in that very same folder and type:
 ```bash
 dividir-video
@@ -54,13 +54,16 @@ The script will now create two (or more) new files and name then accordingly, wh
 
 ### Usage:
 - Place the video you want to convert in a dedicated folder
-- Open a Terminal in that very same folder and type: ```bash converter-video ```
+- Open a Terminal in that very same folder and type:
+```bash
+converter-video
+```
 
 The script will now convert your H.265 video into MP4 H.264, while preserving the original video file.
 
 <hr>
 
-## ⬇️ sacar-youtube: Downloads YouTube Videos
+## ⬇️ `sacar-youtube`: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
 Uses yt-dlp` to download YouTube videos directly into MP4 format and H264 codec for better compatibility, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
