@@ -22,8 +22,6 @@ To use these scripts globally in your system:
 1. **Clone the repository and cd into it:**
 ```bash
 git clone https://github.com/darkouto/shell-scripts.git
-```
-```bash
 cd shell-scripts
 ```
 
