@@ -28,8 +28,16 @@ sudo cp * /usr/local/bin
 ### `dividir-video`: Splits Video Files in a Fast and Lossless way
 - Requirements: `ffmpeg`
 
-This script uses `ffmpeg` to quickly split video files larger than 4GB into two or more files without any losses. Essential for bypassing the 4GB file size limit on FAT32 formatted drives, that are required to use in legacy hardware (like TV's).
-It automatically detects the extension (MKV/MP4) and the duration of the video. If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in several 1-hour parts.
+I created this script because most legacy hardware (like TV's) only support FAT32 formatted USB drives. Since the per-file limit of FAT32 is 4GB, I needed something to quickly split the video file into two or more files without losses in quality, so I used `ffmpeg`'s -segment flag in this script.
+
+In addition, it automatically detects the extension (MKV/MP4) and the duration of the video. If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in 1-hour parts.
+
+- Usage:
+Place the video you want to split in a dedicated folder, and open a Terminal in that very same folder, then type:
+```bash
+dividir-video
+```
+The script will now create two (or more) new files and name then accordingly, while keeping the original video intact.
 
 ### `converter-video`: Converts Videos to H.264 MP4 Format
 - Requirements: `ffmpeg`
