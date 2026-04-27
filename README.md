@@ -21,9 +21,9 @@ cd shell-scripts
 sudo chmod +x *
 ```
 
-3. **Move the scripts to your local bin folder:**
+3. **Copy the scripts to your local bin folder:**
 ```bash
-sudo mv {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
+sudo cp {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
 ```
 
 <hr>
