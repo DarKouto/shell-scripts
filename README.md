@@ -2,6 +2,8 @@
 
 This repository contains a set of bash/shell scripts that automate several tasks that I had to do in my personal workflow.
 
+I used ```#!/usr/bin/env bash``` as **Shebang** for better compatibility across different systems, and because it's the **Best Practice**. 
+
 Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, for my workflow, so *deal with it*. Consider yourself lucky that I've even bothered to write the README in English 💀
 
 The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** Standard Shell. Tested on CachyOS Linux (Arch Based Distro).
@@ -21,8 +23,9 @@ sudo chmod +x *
 
 3. **Move the scripts to your local bin folder:**
 ```bash
-sudo cp * /usr/local/bin
+sudo cp {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
 ```
+
 <hr>
 
 ## 🚀 The Scripts
