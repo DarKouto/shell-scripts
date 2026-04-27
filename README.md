@@ -20,6 +20,6 @@ This repository contains a set of "wrappers" and automation scripts built to str
 To use these scripts globally in your system:
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/darkouto/shell-scripts.git](https://github.com/darkouto/shell-scripts.git)
-   ```
+```bash
+git clone https://github.com/darkouto/shell-scripts.git
+```
