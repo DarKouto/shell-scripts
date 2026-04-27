@@ -2,11 +2,10 @@
 
 This repository contains a set of bash/shell scripts that automate several tasks that I had to do in my personal workflow.
 
-I used ```#!/usr/bin/env bash``` as **Shebang** for better compatibility across different systems, and because it's the **Best Practice**. 
+I used ```#!/usr/bin/env bash``` as **Shebang** for better compatibility across different systems, and because it's the **Best Practice**.
+All the scripts follow the **POSIX Standard**, and were tested on **CachyOS** (Arch Linux Based Distro).
 
-Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, for my workflow, so *deal with it*. Consider yourself lucky that I've even bothered to write the README in English 💀
-
-The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** Standard Shell. Tested on CachyOS Linux (Arch Based Distro).
+Most of the code, as well as the prompts are written in Portuguese. That's because I'm Portuguese and these are my scripts, for my workflow, so *deal with it*. Consider yourself lucky that I've even bothered to write the README in English 💀
 
 ## 🛠️ Installation
 
@@ -30,7 +29,7 @@ sudo cp {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bi
 
 ## 🚀 The Scripts
 
-## `dividir-video`: Splits Video Files in a Fast and Lossless way
+## ✂️ `dividir-video`: Splits Video Files in a Fast and Lossless way
 - Requirements: `ffmpeg`
 
 **Use Case:** Most legacy hardware (like TV's) only support FAT32 formatted USB drives. Since the per-file limit of FAT32 is 4GB, I needed something to split large video files into two or more smaller files, quickly and without losses in quality. I used `ffmpeg`'s -segment flag in this script.
@@ -47,7 +46,7 @@ The script will now create two (or more) new files and name then accordingly, wh
 
 <hr>
 
-## `converter-video`: Converts H.265 Videos to H.264 MP4 Format
+## 🔃 `converter-video`: Converts H.265 Videos to H.264 MP4 Format
 - Requirements: `ffmpeg`
 
 **Use Case:** Most legacy hardware (like TV's) don't support the H.265 codec or the .MKV extension. This script uses ```ffmpeg```'s libx264 library to convert the video file into H.264 cocec and .MP4 extension while maintaining a clean output.
@@ -62,7 +61,7 @@ The script will now convert your H.265 video into MP4 H.264, while preserving th
 
 <hr>
 
-## `sacar-youtube: Downloads YouTube Videos
+## ⬇️ `sacar-youtube: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
 Uses yt-dlp` to download YouTube videos directly into MP4 format and H264 codec for better compatability, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
@@ -76,7 +75,7 @@ Then just paste the URL of the video you want to download.
 
 <hr>
 
-## `musica-iveco`: Copies Music to USB Drive in Alphabetical Order
+## 🎵 `musica-iveco`: Copies Music to USB Drive in Alphabetical Order
 This one is is a very pecicular **edge case**. I have a **IVECO Daily** van that I use for work. The radio has a USB Port to play MP3 files.
 
 **The problem**: the radio sorts the MP3 files by transfer date and not by alphabetical order, which leads to the tracklists being complepety shuffled. **SHAME ON YOU IVECO** (it's a really good vehicle btw, but this issue with the radio is complete ASS. I don't care, sue me.)
