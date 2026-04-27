@@ -54,18 +54,16 @@ The script will now create two (or more) new files and name then accordingly, wh
 
 ### Usage:
 - Place the video you want to convert in a dedicated folder
-- Open a Terminal in that very same folder and type:
-```bash
-converter-video
-```
+- Open a Terminal in that very same folder and type: ```bash converter-video ```
+
 The script will now convert your H.265 video into MP4 H.264, while preserving the original video file.
 
 <hr>
 
-## ⬇️ `sacar-youtube: Downloads YouTube Videos
+## ⬇️ sacar-youtube: Downloads YouTube Videos
 - Requirements: `firefox` and `yt-dlp` https://github.com/yt-dlp/yt-dlp
 
-Uses yt-dlp` to download YouTube videos directly into MP4 format and H264 codec for better compatability, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
+Uses yt-dlp` to download YouTube videos directly into MP4 format and H264 codec for better compatibility, uses Firefox cookies to prevent bot detection and ensure high-speed downloads.
 
 ### Usage:
 - Open Terminal and type:
