@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+url_do_video=$1
+
+read -p "Insere o URL do Vídeo: " url_do_video
+
+yt-dlp -f "b[ext=mp4]" --cookies-from-browser firefox "$url_do_video"
+
+echo "Download completo"

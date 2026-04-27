@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Detectar o ficheiro e guardar o nome
+ficheiro_original=$(ls *.mp4 *.mkv 2>/dev/null | head -n 1)
+if [[ -z "$ficheiro_original" ]]; then
+    echo "ERRO: Não há nenhum ficheiro .mp4 ou .mkv na pasta!"
+    exit 1
+fi
+echo "Ficheiro detetado: $ficheiro_original"
+
+# Extrair o nome sem a extensão
+nome_sem_extensao="${ficheiro_original%.*}"
+
+# Correr o Comando do FFMPEG
+ffmpeg -loglevel error -stats -i "$ficheiro_original" -c:v libx264 -preset superfast -crf 22 -c:a aac -b:a 192k "${nome_sem_extensao}_convertido.mp4"
+
+echo "Conversão para MP4 com Codec 264 completa"

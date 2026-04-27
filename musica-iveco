@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+caminho_pen="/run/media/darkouto/PEN_IVECO/"
+if [[ ! -d "$caminho_pen" ]]; then
+    echo "ERRO: A PEN_IVECO não está ligada!"
+    exit 1
+fi
+
+for pasta in */; do
+  echo "A copiar: $pasta"
+  cp -rv "$pasta" "$caminho_pen"
+  # -r recursive: copia pastas e subpastas
+  # -v verbose: listar no terminal cada ficheiro
+done
+
+echo "A Eliminar Ficheiros de Indexação..."
+find $caminho_pen -name ".*" -delete
+
+echo "Processo Terminado"

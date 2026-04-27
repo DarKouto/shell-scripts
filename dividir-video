@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# Detectar o ficheiro e guardar o nome
+ficheiro_original=$(ls *.mp4 *.mkv 2>/dev/null | head -n 1)
+if [[ -z "$ficheiro_original" ]]; then
+    echo "ERRO: Não há nenhum ficheiro .mp4 ou .mkv na pasta!"
+    exit 1
+fi
+echo "Ficheiro detetado: $ficheiro_original"
+
+# Detectar a Extensão
+extensao="${ficheiro_original##*.}"
+echo "Formato: $extensao"
+
+# Definir o nome de saída com base no nome original
+if [[ "$ficheiro_original" == *[Rr][Aa][Ww]* ]]; then
+    prefixo="RAW"
+elif [[ "$ficheiro_original" == *[Ss][Mm][Aa][Cc][Kk][Dd][Oo][Ww][Nn]* ]]; then
+    prefixo="SmackDown"
+else
+    prefixo="Parte"
+fi
+echo "Tipo detetado: $prefixo"
+
+# Obter Duração em segundos
+duracao_total=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$ficheiro_original")
+# Converter para Número Inteiro
+duracao_inteira=${duracao_total%.*}
+
+# Verificar se o vídeo tem mais que 4 horas
+if (( duracao_inteira > 14400 )); then
+    echo "Vídeo muito longo detetado (> 4h). A dividir em blocos de 1 hora."
+    segundos=3600
+else
+    echo "Vídeo de duração normal. A dividir em 2 partes."
+    ((segundos = (duracao_inteira / 2) + 60))
+fi
+
+# Correr o Comando do FFMPEG
+ffmpeg -loglevel error -stats -i "$ficheiro_original" -c copy -f segment -segment_format "$extensao" -segment_time $segundos -segment_start_number 1 -reset_timestamps 1 "$prefixo-%02d.$extensao"
+
+echo "Divisão completa: Gerados ficheiros com o prefixo $prefixo"
