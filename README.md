@@ -4,7 +4,27 @@ This repository contains a set of bash/shell scripts that automate several tasks
 Most of the code and the prompts in these scripts are in Portuguese, because, well I'm Portuguese and these are my scripts, so deal with it.
 The scripts work on **BASH** and **ZSH**, and should also work on any **POSIX** Standard Shell. Tested on CachyOS Linux (Arch Based Distro).
 
-## 🚀 The Scripts
+## 🛠️ Installation
+To use these scripts globally in your system:
+
+1. **Clone the repository and cd into it:**
+```bash
+git clone https://github.com/darkouto/shell-scripts.git
+cd shell-scripts
+```
+
+2. **Grant execution permissions:**
+```bash
+sudo chmod +x *
+```
+
+3. **Move the scripts to your local bin folder:**
+```bash
+sudo cp * /usr/local/bin
+```
+<hr>
+
+## 🚀 The Scripts and Usage
 
 ### **Split Video: `dividir-video`**
 - Requirements: `ffmpeg`
@@ -26,25 +46,3 @@ Downloads YouTube videos directly into MP4 format and H264 codec for better comp
 ### Copy Music to USB in Alphabetical Order: `musica-iveco`
 Specialized audio extraction and normalization script.
     * *Use Case:* Prepares audio files for in-vehicle entertainment systems, ensuring consistent volume and format compatibility.
-
-<hr>
-
-## 🛠️ Installation
-To use these scripts globally in your system:
-
-1. **Clone the repository and cd into it:**
-```bash
-git clone https://github.com/darkouto/shell-scripts.git
-cd shell-scripts
-```
-
-2. **Grant execution permissions:**
-```bash
-sudo chmod +x *
-```
-
-3. **Move the scripts to your local bin folder:**
-```bash
-sudo cp * /usr/local/bin
-```
-<hr>
