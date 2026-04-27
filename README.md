@@ -8,7 +8,7 @@ This repository contains a set of "wrappers" and automation scripts built to str
 
 * **`dividir-video`**: Automatically detects and splits large video files (MKV/MP4) into 4GB chunks using `ffmpeg`. 
     * *Use Case:* Essential for bypassing the 4GB file size limit on FAT32 formatted drives used in legacy hardware.
-* **`converter-video`**: Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.
+* **`converter-video`**: Transcodes H.265 (HEVC) videos to H.264 MP4 with a clean output.sudo cp * /usr/local/bin
     * *Use Case:* Fixes playback issues on older Smart TVs and devices that do not support modern H.265 codecs.
 * **`sacar-youtube`**: A streamlined wrapper for `yt-dlp`.
     * *Use Case:* Downloads YouTube videos directly into MP4 format, utilizing Firefox cookies to prevent bot detection and ensure high-speed downloads.
@@ -30,7 +30,7 @@ cd shell-scripts
 sudo chmod +x *
 ```
 
-3. **Move the scripts to your local bin::**
+3. **Move the scripts to your local bin folder:**
 ```bash
 sudo cp * /usr/local/bin
 ```
