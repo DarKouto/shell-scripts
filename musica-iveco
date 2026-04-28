@@ -16,7 +16,7 @@ for pasta in */; do
     # Força o Bash a ordernar em vez do CP
     cp -v "$pasta"* "$caminho_pen/$pasta"
 
-    # Garante que o índice da PEN Drive é reescrito
+    echo "A reescrever o índice da PEN Drive"
     sync 
 done
 
