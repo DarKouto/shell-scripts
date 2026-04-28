@@ -3,25 +3,25 @@
 caminho_pen="/run/media/darkouto/PEN_IVECO/"
 
 if [[ ! -d "$caminho_pen" ]]; then
-    echo "ERRO: A PEN_IVECO não está ligada!"
+    echo "ERRO: Caminho da PEN não encontrado!"
     exit 1
 fi
 
+echo "A iniciar processo de copiar todas as pastas..."
 for pasta in */; do
-    echo "A processar pasta: $pasta"
-    mkdir -p "$caminho_pen/$pasta"
-    # 2. Loop ficheiro a ficheiro dentro da pasta, ordenado alfabeticamente
-    # O Bash faz o sort automático ao usar o wildcard *
-    for ficheiro in "$pasta"*; do
-        if [[ -f "$ficheiro" ]]; then
-            echo "A copiar ficheiro: $(basename "$ficheiro")"
-            cp -v "$ficheiro" "$caminho_pen/$pasta"
-            sync
-        fi
-    done
+
+    # Cria a pasta na PEN Drive
+    mkdir -vp "$caminho_pen/$pasta"
+
+    # Copia os por ordem alfabética graças ao * (Globbing)
+    # Força o Bash a ordernar em vez do CP
+    cp -v "$pasta"* "$caminho_pen/$pasta"
+
+    # Garante que o índice da PEN Drive é reescrito
+    sync 
 done
 
-echo "A Eliminar Ficheiros de Indexação..."
+echo "A eliminar ficheiros de indexação..."
 find "$caminho_pen" -name ".*" -delete
 
-echo "Processo Terminado"
+echo "Processo Concluído!"
