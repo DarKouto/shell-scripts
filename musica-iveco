@@ -1,19 +1,27 @@
 #!/usr/bin/env bash
 
 caminho_pen="/run/media/darkouto/PEN_IVECO/"
+
 if [[ ! -d "$caminho_pen" ]]; then
     echo "ERRO: A PEN_IVECO não está ligada!"
     exit 1
 fi
 
 for pasta in */; do
-  echo "A copiar: $pasta"
-  cp -rv "$pasta" "$caminho_pen"
-  # -r recursive: copia pastas e subpastas
-  # -v verbose: listar no terminal cada ficheiro
+    echo "A processar pasta: $pasta"
+    mkdir -p "$caminho_pen/$pasta"
+    # 2. Loop ficheiro a ficheiro dentro da pasta, ordenado alfabeticamente
+    # O Bash faz o sort automático ao usar o wildcard *
+    for ficheiro in "$pasta"*; do
+        if [[ -f "$ficheiro" ]]; then
+            echo "A copiar ficheiro: $(basename "$ficheiro")"
+            cp -v "$ficheiro" "$caminho_pen/$pasta"
+            sync
+        fi
+    done
 done
 
 echo "A Eliminar Ficheiros de Indexação..."
-find $caminho_pen -name ".*" -delete
+find "$caminho_pen" -name ".*" -delete
 
 echo "Processo Terminado"
