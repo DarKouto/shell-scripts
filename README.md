@@ -84,9 +84,11 @@ This one is is a very peculiar **edge case**. I have a **IVECO Daily** van that 
 
 **The solution**: using this script which forces the files to be transferred to the USB Drive in an alphabetically orderly fashion. **AS GOD INTENDED**. 
 
-It uses a simple *for loop*: for each folder in the PC it creates another folder with the same name in the USB Drive, then copies the files alphabetically with the *Globbing* method for extra safety. Finally it runs the *sync* command to force the indexes of the USB Drive to be rewritten in the correct order.
+It uses a simple *for loop*: for each folder in the PC it creates another folder with the same name in the USB Drive, and then copies the files alphabetically with the *Globbing* method for extra safety.
 
-When the *for loop* ends, another command removes all the indexing files and dotfiles.
+After this process is complete, the script runs the *sync* command to force the indexes of the USB Drive to be rewritten in the correct order. (Ex: if a folder that starts with the letter "A" is added afterwards, this guarantees that it is placed in the correct order, and not in the end).
+
+Finally, the script performs a cleanup to remove all indexing files and dotfiles, ensuring the drive remains organized and free of system junk.
 
 ### Usage:
 **IMPORTANT NOTE:** My USB Drive path is "/run/media/darkouto/PEN_IVECO/", in your case it should be different, be sure to edit the script file to match your own USB Drive path.
