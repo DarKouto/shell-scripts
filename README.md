@@ -82,7 +82,7 @@ This one is is a very peculiar **edge case**. I have a **IVECO Daily** van that 
 
 **The problem**: the radio sorts the MP3 files by transfer date and not by alphabetical order, which leads to the tracklists being complepety shuffled. **SHAME ON YOU IVECO** (it's a really good vehicle btw, but this issue with the radio is complete ASS. I don't care, sue me.)
 
-**The solution**: using this script which forces the files to be transferred to the USB Drive in an alphabetically orderly fashion. **AS GOD INTENDED**. It uses a simple *for loop* with the -r recursive flag to make sure folders and subfolders are copied.
+**The solution**: using this script which forces the files to be transferred to the USB Drive in an alphabetically orderly fashion. **AS GOD INTENDED**. It uses a simple *for loop* with the -r flag (recursive) to make sure folders and subfolders are copied.
 
 ### Usage:
 **IMPORTANT NOTE:** My USB Drive path is "/run/media/darkouto/PEN_IVECO/", in your case it should be different, be sure to edit the script file to match your own USB Drive path.
