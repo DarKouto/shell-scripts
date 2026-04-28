@@ -9,18 +9,14 @@ fi
 
 echo "A iniciar processo de copiar todas as pastas..."
 for pasta in */; do
-    # Cria a pasta na PEN Drive
     mkdir -vp "$caminho_pen/$pasta"
-
-    # Copia os ficheiros por ordem alfabética graças ao * (Globbing)
-    # Força o Bash a ordernar em vez do CP
     cp -v "$pasta"* "$caminho_pen/$pasta"
-
-    echo "A reescrever o índice da PEN Drive"
-    sync 
 done
 
+echo "A reescrever o índice da PEN Drive..."
+sync
+
 echo "A eliminar ficheiros de indexação..."
-find "$caminho_pen" -name ".*" -delete
+find "$caminho_pen" -name ".*" -exec rm -rf {} +
 
 echo "Processo Concluído!"
