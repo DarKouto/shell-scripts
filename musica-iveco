@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-caminho_pen="/run/media/darkouto/PEN_IVECO/"
+caminho_pen="/run/media/darkouto/PEN_IVECO"
 
 if [[ ! -d "$caminho_pen" ]]; then
     echo "ERRO: Caminho da PEN não encontrado!"
