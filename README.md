@@ -10,18 +10,16 @@ Most of the code, as well as the prompts are written in Portuguese. That's becau
 
 ## 🛠️ Installation
 
-1. **Clone the repository and cd into it:**
+**Copy this command to your Terminal:**
 ```bash
 git clone https://github.com/darkouto/shell-scripts.git
 cd shell-scripts
-```
-
-2. **Install the scripts to your local bin folder::**
-```bash
 sudo install -v -m 755 {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
 ```
+This command clones the repo to your local machine, then it changes directory into it, and finally grants execution permission to the scripts and moves them to your /usr/local/bin folder, allowing you to use this scripts in the Terminal from any working directory.
 
-or download the [**instalar-scripts**](https://github.com/DarKouto/shell-scripts/blob/main/instalar-scripts) file, make it executable and run it.
+**Alternative Method**
+Dowwnload the [**instalar-scripts**](https://github.com/DarKouto/shell-scripts/blob/main/instalar-scripts) file, make it executable and run it.
 
 <hr>
 
