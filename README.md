@@ -18,8 +18,8 @@ sudo install -v -m 755 {dividir-video,converter-video,sacar-youtube,musica-iveco
 ```
 This command **clones the repo** to your local machine, **changes directory** into it, then **grants execution permission** to the scripts and **copies** them to your /usr/local/bin folder, allowing you to use them in your Terminal from any working directory.
 
-**Alternative Method**: <a href="https://raw.githubusercontent.com/DarKouto/shell-scripts/main/instalar-scripts">Download the instalar-scripts file</a> (Right-click and "Save Link As..."), then make it executable and run it.
-**Alternative Method**: [Download the instalar-scripts file](https://raw.githubusercontent.com/DarKouto/shell-scripts/main/instalar-scripts) (Right-click and "Save Link As..."), then make it executable and run it.
+**Alternative Method**: [Download the **instalar-scripts** file](https://raw.githubusercontent.com/DarKouto/shell-scripts/main/instalar-scripts) (Right-click and "Save Link As..."), then make it executable and run it.
+
 <hr>
 
 ## 🚀 The Scripts
