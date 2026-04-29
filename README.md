@@ -22,6 +22,8 @@ sudo install -v -m 755 {dividir-video,converter-video,sacar-youtube,musica-iveco
 ```
 Note: This command automatically sets the correct execution permissions (755) and copies the files in a single step.
 
+or download the **instalar-scripts** file, make it executable and run it.
+
 <hr>
 
 ## 🚀 The Scripts
