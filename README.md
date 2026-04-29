@@ -16,7 +16,7 @@ git clone https://github.com/darkouto/shell-scripts.git
 cd shell-scripts
 sudo install -v -m 755 {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
 ```
-This command clones the repo to your local machine, changes directory into, then grants execution permission to the scripts and moves them to your /usr/local/bin folder, allowing you to use them in your Terminal from any working directory.
+This command **clones the repo** to your local machine, **changes directory** into it, then **grants execution permission** to the scripts and **copies** them to your /usr/local/bin folder, allowing you to use them in your Terminal from any working directory.
 
 **Alternative Method**
 
