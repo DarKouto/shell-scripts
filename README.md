@@ -82,7 +82,7 @@ This one is is a very peculiar **edge case**. I have a **IVECO Daily** van that 
 
 It uses a simple *for loop*: for each folder in the PC it creates another folder with the same name in the USB Drive, and then copies the files alphabetically with the *Globbing* method for extra safety.
 
-After this process is complete, the script runs the *sync* command to force the indexes of the USB Drive to be rewritten in the correct order. (Ex: if a folder that starts with the letter "A" is added afterwards, this guarantees that it is placed in the correct order, and not in the end).
+After this process is complete, the script runs the *sync* command to force the indexes of the USB Drive to be rewritten in the correct order. (Ex: if an album is added afterwards, this guarantees that it is placed in the correct order, and not in the end).
 
 Finally, the script performs a cleanup to remove all indexing files and dotfiles, ensuring the drive remains organized and free of system junk.
 
