@@ -16,15 +16,11 @@ git clone https://github.com/darkouto/shell-scripts.git
 cd shell-scripts
 ```
 
-2. **Grant execution permissions:**
+2. **Install the scripts to your local bin folder::**
 ```bash
-sudo chmod +x *
+sudo install -v -m 755 {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
 ```
-
-3. **Copy the scripts to your local bin folder:**
-```bash
-sudo cp {dividir-video,converter-video,sacar-youtube,musica-iveco} /usr/local/bin/
-```
+Note: This command automatically sets the correct execution permissions (755) and copies the files in a single step.
 
 <hr>
 
