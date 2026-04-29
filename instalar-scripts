@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+repo_url="https://github.com/darkouto/shell-scripts.git"
+temp_dir="shell-scripts-temp"
+custom_scripts=("dividir-video" "converter-video" "sacar-youtube" "musica-iveco")
+
+echo "A clonar o repo para pasta temporária..."
+git clone "$repo_url" "$temp_dir"
+cd "$temp_dir"
+
+echo "A instalar scripts em /usr/local/bin ..."
+sudo install -v -m 755 "${custom_scripts[@]}" /usr/local/bin/
+
+echo "A limpar ficheiros temporários..."
+cd ..
+rm -rf "$temp_dir"
+
+echo "Instalação concluída com sucesso!"
