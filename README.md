@@ -31,7 +31,10 @@ This command **clones the repo** to your local machine, **changes directory** in
 
 **Use Case:** Most legacy hardware (like TV's) only support FAT32 formatted USB drives. Since the per-file limit of FAT32 is 4GB, I needed something to split large video files into two or more smaller files, quickly and without losses in quality. I used the `ffmpeg` -segment flag in this script.
 
-In addition, it automatically detects the video's duration and extension (MKV/MP4). If the video is shorter than 4 hours, it splits it into 2 different parts. If the video is longer than 4 hours, it splits in 1-hour parts.
+In addition, I wrote this script so that it automatically detects the video's size, duration and extension (MKV/MP4), and applies this logic:
+- If the video is bigger than 8GB, it splits in 3 parts.
+- Else If the video is longer than 4 hours, it splits in 1-hour parts.
+- Else it simply splits into 2 different parts.
 
 ### Usage:
 - Place the video file you want to split in a dedicated folder.
